@@ -1,4 +1,4 @@
-COMPILE = bin/let2.exe
+COMPILE = bin/sdt.exe
 
 .PHONY: all clean zip
 

@@ -1,0 +1,34 @@
+(executable
+ (name sdt)
+ (modules sdt)
+ (modes byte native)
+ (promote (until-clean))
+ (libraries x86 ast))
+
+(executable
+ (name let)
+ (modules let)
+ (promote (until-clean))
+ (libraries x86 ast))
+
+(executable
+ (name let2)
+ (modules let2)
+ (promote (until-clean))
+ (libraries x86 ast))
+
+(library
+ (name ast)
+ (modules ast))
+
+(library
+ (name interpreter)
+ (modules interpreter)
+ (libraries ast))
+
+(env
+ (dev
+  (flags
+   (:standard -w "+a-4-7-9-27-29-30-32..42-44-45-48-50-60-66..70")
+   ))) 
+
